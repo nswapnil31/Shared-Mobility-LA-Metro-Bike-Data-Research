@@ -21,7 +21,7 @@ def scrap():
 
 if __name__ == '__main__':
 	sched = BackgroundScheduler()
-	sched.add_job(scrap, 'interval', seconds=10)
+	sched.add_job(scrap, 'interval', hours=1)
 	sched.start()
 	print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
